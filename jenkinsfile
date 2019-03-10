@@ -1,0 +1,11 @@
+node{
+    
+    stage('git clone') {
+    git 'https://github.com/devopsvc/mahalogin.git'
+    }
+    
+   stage('maven targets') {
+       sh label: '', script: 'mvn install'
+    }
+    
+}
